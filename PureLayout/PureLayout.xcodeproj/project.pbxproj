@@ -42,6 +42,11 @@
 		A7D496771B7B084800A74818 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B139A50D1956333500F33B19 /* InfoPlist.strings */; };
 		A7D496781B7B084800A74818 /* Images-iOS.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B125489319C29D2A00DDD7BF /* Images-iOS.xcassets */; };
 		A7D4967A1B7B084800A74818 /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1046AB01A7F32380017187F /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AE2F65FB1BBEEE5D00D9EBCD /* PureLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AE2F65FA1BBEEE5D00D9EBCD /* PureLayout.h */; };
+		AEB545BE1BBF0EB600021441 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B1046A851A7F2C700017187F /* ALView+PureLayout.m */; };
+		AEB545BF1BBF0EB600021441 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B1046A871A7F2C700017187F /* NSArray+PureLayout.m */; };
+		AEB545C01BBF0EB600021441 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B1046A891A7F2C700017187F /* NSLayoutConstraint+PureLayout.m */; };
+		AEB545C11BBF0F3E00021441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12C23DE17C3FDE4001CF667 /* UIKit.framework */; };
 		B1006C6919E7691D00B92767 /* ALiOSDemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1006C6819E7691D00B92767 /* ALiOSDemoListController.m */; };
 		B1006C7019E76D4200B92767 /* ALiOSDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1006C6F19E76D4200B92767 /* ALiOSDemo1ViewController.m */; };
 		B1046A811A7F29F80017187F /* PureLayoutDistributeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1046A801A7F29F80017187F /* PureLayoutDistributeTests.m */; };
@@ -171,6 +176,16 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE2F65F61BBEEE5D00D9EBCD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AE2F65FB1BBEEE5D00D9EBCD /* PureLayout.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1046ACC1A7F32390017187F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -212,6 +227,9 @@
 		A7DB5C911B7AE756000ED37F /* iOSDemo6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iOSDemo6ViewController.swift; path = "Example-iOS/Demos/iOSDemo6ViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A7DB5C931B7AE854000ED37F /* iOSDemo7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iOSDemo7ViewController.swift; path = "Example-iOS/Demos/iOSDemo7ViewController.swift"; sourceTree = SOURCE_ROOT; };
 		A7DB5C951B7AEC83000ED37F /* iOSDemo8ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iOSDemo8ViewController.swift; path = "Example-iOS/Demos/iOSDemo8ViewController.swift"; sourceTree = SOURCE_ROOT; };
+		AE2F65F81BBEEE5D00D9EBCD /* libPureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPureLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE2F65FA1BBEEE5D00D9EBCD /* PureLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		AE2F65FC1BBEEE5D00D9EBCD /* PureLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PureLayout.m; sourceTree = "<group>"; };
 		B1006C6719E7691D00B92767 /* ALiOSDemoListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALiOSDemoListController.h; path = "Example-iOS/ALiOSDemoListController.h"; sourceTree = SOURCE_ROOT; };
 		B1006C6819E7691D00B92767 /* ALiOSDemoListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALiOSDemoListController.m; path = "Example-iOS/ALiOSDemoListController.m"; sourceTree = SOURCE_ROOT; };
 		B1006C6E19E76D4200B92767 /* ALiOSDemo1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALiOSDemo1ViewController.h; path = "Example-iOS/Demos/ALiOSDemo1ViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -300,6 +318,14 @@
 				A7D496721B7B084800A74818 /* Foundation.framework in Frameworks */,
 				A7D496731B7B084800A74818 /* PureLayout.framework in Frameworks */,
 				A7D496741B7B084800A74818 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2F65F51BBEEE5D00D9EBCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB545C11BBF0F3E00021441 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +452,15 @@
 			path = PureLayout_Mac;
 			sourceTree = "<group>";
 		};
+		AE2F65F91BBEEE5D00D9EBCD /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				AE2F65FA1BBEEE5D00D9EBCD /* PureLayout.h */,
+				AE2F65FC1BBEEE5D00D9EBCD /* PureLayout.m */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
 		B1006C6A19E76B8700B92767 /* Demos */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +512,7 @@
 				B12C23E417C3FDE4001CF667 /* Example-iOS */,
 				B1A290DC19562FDA00D4765E /* Example-Mac */,
 				A7DB5C801B7AD612000ED37F /* Supporting Files */,
+				AE2F65F91BBEEE5D00D9EBCD /* PureLayout */,
 				B12C23DD17C3FDE4001CF667 /* Frameworks */,
 				B12C23DC17C3FDE4001CF667 /* Products */,
 			);
@@ -492,6 +528,7 @@
 				B1046AB01A7F32380017187F /* PureLayout.framework */,
 				B1046AD81A7F32790017187F /* PureLayout.framework */,
 				A7D4967E1B7B084800A74818 /* Example-iOS-Xcode7.app */,
+				AE2F65F81BBEEE5D00D9EBCD /* libPureLayout.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -667,6 +704,23 @@
 			productReference = A7D4967E1B7B084800A74818 /* Example-iOS-Xcode7.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AE2F65F71BBEEE5D00D9EBCD /* PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE2F66001BBEEE5D00D9EBCD /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildPhases = (
+				AE2F65F41BBEEE5D00D9EBCD /* Sources */,
+				AE2F65F51BBEEE5D00D9EBCD /* Frameworks */,
+				AE2F65F61BBEEE5D00D9EBCD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = AE2F65F81BBEEE5D00D9EBCD /* libPureLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		B1046AAF1A7F32380017187F /* PureLayout_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1046AC91A7F32390017187F /* Build configuration list for PBXNativeTarget "PureLayout_iOS" */;
@@ -787,6 +841,9 @@
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
+					AE2F65F71BBEEE5D00D9EBCD = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					B1046AAF1A7F32380017187F = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -825,6 +882,7 @@
 				B1A290DA19562FDA00D4765E /* Example-Mac */,
 				B1EC855C195662790099293C /* PureLayoutTests-iOS */,
 				B1EC857B195662B40099293C /* PureLayoutTests-Mac */,
+				AE2F65F71BBEEE5D00D9EBCD /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -921,6 +979,16 @@
 				A7D4966D1B7B084800A74818 /* iOSDemo7ViewController.swift in Sources */,
 				A7D4966E1B7B084800A74818 /* ALiOSDemo7ViewController.m in Sources */,
 				A7D4966F1B7B084800A74818 /* ALiOSDemo4ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2F65F41BBEEE5D00D9EBCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB545BE1BBF0EB600021441 /* ALView+PureLayout.m in Sources */,
+				AEB545BF1BBF0EB600021441 /* NSArray+PureLayout.m in Sources */,
+				AEB545C01BBF0EB600021441 /* NSLayoutConstraint+PureLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1140,6 +1208,53 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Example-iOS/Example-iOS-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AE2F65FE1BBEEE5D00D9EBCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AE2F65FF1BBEEE5D00D9EBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -1575,6 +1690,15 @@
 			buildConfigurations = (
 				A7D4967C1B7B084800A74818 /* Debug */,
 				A7D4967D1B7B084800A74818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE2F66001BBEEE5D00D9EBCD /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE2F65FE1BBEEE5D00D9EBCD /* Debug */,
+				AE2F65FF1BBEEE5D00D9EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
